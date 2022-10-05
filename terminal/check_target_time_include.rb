@@ -1,5 +1,6 @@
-require './time'
+# frozen_string_literal: true
 
+require './target_time_include'
 
 # シェル操作を行う場合
 valid_range = Range.new(0, 23)
@@ -52,4 +53,4 @@ while true
   puts '0~23の範囲で入力してください'
 end
 
-p Time.new(start, finish, target).included?
+p TargetTimeInclude.new(start, finish, target).included?

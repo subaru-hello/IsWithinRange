@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class Time
-  attr_reader :target_time, :start_time, :finish_time
+class TargetTimeInclude
+  attr_reader :start_time, :finish_time, :target_time
 
   def initialize(start_time, finish_time, target_time)
     remove_redundant_zero(start_time, finish_time, target_time)
@@ -21,7 +21,6 @@ class Time
   end
 
   private
-
 
   # 01や002などの数を正規表現で1や2に変換する
   def remove_redundant_zero(*time)
@@ -54,7 +53,7 @@ class Time
   def start_time?
     start_time.eql? target_time
   end
-  
+
   # 日を跨いでいるかチェックするメソッド
   def not_across_the_day?
     times_between_start_to_finish.include?(target_time)

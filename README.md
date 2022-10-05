@@ -2,12 +2,12 @@
 
 ### test execution
 ```ruby
-$ ruby ./test/test_target_time.rb
+$ ruby ./test/test_target_time_include.rb
 ```
 
 ### source file execution
 ```ruby
-$ ruby ./shell/target_time_check.rb
+$ ruby ./terminal/check_target_time_include.rb
 ```
 
 ### rules
